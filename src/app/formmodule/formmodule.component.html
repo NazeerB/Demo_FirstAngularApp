@@ -1,0 +1,8 @@
+<h3>Form Module</h3>
+<form #loginForm="ngForm" (ngSubmit)="LoggedIn1(loginForm.value)">
+    <input type="text" placeholder="Enter User Name" name="txtUser" ngModel />
+    <br>
+    <input type="text" placeholder="Enter User Password" name="txtUserpwd" ngModel />
+    <br>
+    <button>Login</button>
+</form>

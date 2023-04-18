@@ -1,0 +1,7 @@
+<h3>Childcomponent works!</h3>
+<h5>Value pass from Parent to Child Component : {{Item}}</h5>
+<div>
+    <h5>Pass data from Child to Parent:{{name.value}}</h5>
+    <input type="text" #name>
+    <button (click)="DataEvent.emit(name.value)">Send Data</button>
+</div> 

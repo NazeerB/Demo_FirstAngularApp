@@ -1,0 +1,16 @@
+<h2>Image Binding</h2>
+<form #form="ngForm" (ngSubmit)="SendData(form)">
+<div class="form-group">
+    <label for="PhotoPath">PhotoPath</label>
+    <input type="text" id="PhotoPath" name="PhotoPath"
+    [(ngModel)]="PhotoPath" #photoPrev="ngModel" class="form-control" />
+
+    <div class="form-group">
+        <button type="button" (click)="CheckPreview()">
+            {{showPreview?"Hide":"Show"}}Preview
+        </button>
+    </div>
+    <img [src]="PhotoPath" height="100" width="100" *ngIf="showPreview" />
+</div>
+
+</form>

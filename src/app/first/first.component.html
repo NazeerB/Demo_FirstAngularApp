@@ -1,0 +1,19 @@
+<h1>first works!</h1>
+<div>{{title}}</div>
+<br>
+<button (click)="GetData()">ClickMe_consoleLog</button>
+<button (click)="GetMessage('Hi Nazeer')">ClickMe-WithParameters</button>
+<br>
+<br><br>
+<span>{{res}}</span>
+<br>
+<input type="text" #txtname (keyup)="GetMessage(txtname.value)" placeholder="Enter Name"/>
+<br><br>
+<button (click)="Counter('increment')">+</button>
+<button (click)="Counter('decrement')">-</button>
+<span>{{count}}</span>
+<br><br>
+<label>Property Binding</label><br>
+<input type="text" [placeholder]=title/>
+
+

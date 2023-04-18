@@ -1,0 +1,10 @@
+<h3>Databindings works!</h3>
+<div>{{title}}</div>
+
+<div><b>Full Name:</b> {{firstName +" "+ lastName}}</div>
+<div><label><b>Employee Age is: </b></label><input type="text" value={{GetAge()}}></div>
+<br>
+<br>
+<button (click)="GetData('Welcome Baig')">Click Me</button>
+<input placeholder="Enter name" type="text" #txtname name="namebox" (keyup)="GetData(txtname.value)" />
+<span>Name of TextBox Value is: {{title}}</span>

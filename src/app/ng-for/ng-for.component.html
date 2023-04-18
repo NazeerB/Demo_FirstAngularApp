@@ -1,0 +1,25 @@
+<h3>ng-for works!</h3>
+<div >
+    <span *ngFor="let fruit of Fruits">
+       <li>{{fruit}}</li>        
+    </span>
+</div>
+
+<br>
+<br>
+<div>
+        <span *ngFor="let item of FruitPrices">
+            <li>{{item.name}} Price: {{item.price}}</li>
+        </span>
+</div>
+
+<br>
+<br>
+<div>
+    <span *ngFor="let employee of EmployeeWithDepartment">
+        <li>{{employee.name}} and Email: {{employee.email}}</li>
+        <ul *ngFor="let department of employee.Departments">
+            <li>DeptId: {{department.Id}} and DeptName: {{department.name}}</li>
+        </ul>
+    </span>
+</div>

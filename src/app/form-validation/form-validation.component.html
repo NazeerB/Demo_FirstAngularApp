@@ -1,0 +1,16 @@
+<h2>Form Validation</h2>
+<div>
+    <form [formGroup]="UserForm" (ngSubmit)="SubmitData()">
+        <input type="text" placeholder="Enter Name" formControlName="UserName" name="UserName">
+        <input type="password" placeholder="Enter Password" formControlName="UserPassword" name="UserPassword">
+        <input type="email" placeholder="Enter Email" formControlName="Email" name="Email">
+        <button [disabled]="UserForm.invalid">Submit</button>
+        <br>
+        <span class="RequiredClass" *ngIf="UserName && UserName.invalid && UserName.touched">Incorrect User Name</span>
+        <br>
+        <span class="RequiredClass" *ngIf="UserPassword && UserPassword.invalid && UserPassword.touched">Incorrect User
+            Password</span>
+        <br>
+        <span class="RequiredClass" *ngIf="Email && Email.invalid">Incorrect User Password</span>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<h3>ngif works!</h3>
+<br>
+<span *ngIf="IsAlive;then IFBLOCK else ElseBlock"></span>
+<ng-template #IFBLOCK>
+    Yes it's Alive
+</ng-template>
+<ng-template #ElseBlock>
+    It's Not Alive
+</ng-template>
